@@ -23,7 +23,18 @@ import plant3 from '../assets/images/plant_3.png';
 import plant4 from '../assets/images/plant_4.png';
 import plant5 from '../assets/images/plant_5.png';
 import plant6 from '../assets/images/plant_6.png';
-
+import placeHolder from '../assets/images/logo_placeholder.png';
+import whoWeAreBg from '../assets/images/who_we_are_bg.png';
+import iconRefurb from '../assets/images/icon_refurb.png';
+import iconprecious from '../assets/images/icon_precious.png';
+import iconcarbon from '../assets/images/icon_carbon.png';
+import iconrepair from '../assets/images/icon_repair.png';
+import iconupcycle from '../assets/images/icon_upcycle.png';
+import client1 from '../assets/images/client1.png';
+import client2 from '../assets/images/client2.png';
+import client3 from '../assets/images/client3.png';
+import client4 from '../assets/images/client4.png';
+import client5 from '../assets/images/client5.png';
 
 const Home = () => {
     useEffect(() => {
@@ -39,7 +50,7 @@ const Home = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 position-relative">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
-                        <img src="/assets/images/logo_placeholder.png" alt="BluePlanet" height="60" />
+                        <img src={placeHolder} alt="BluePlanet" height="60" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span className="navbar-toggler-icon"></span>
@@ -47,12 +58,12 @@ const Home = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto align-items-center gap-4 fw-bolder">
                             <li className="nav-item"><Link className="nav-link text-dark" to="/">Home</Link></li>
-                            <li className="nav-item"><Link className="nav-link text-dark" to="/#who-we-are">Who We Are</Link></li>
+                            <li className="nav-item"><Link className="nav-link text-dark" to="/what-we-do">What We Do</Link></li>
                             <li className="nav-item position-relative">
-                                <Link className="nav-link text-dark fw-bold" to="/#services">Services</Link>
-                                <div className="d-flex flex-column align-items-center position-absolute start-50 translate-middle-x" style={{ top: '100%', paddingTop: '10px' }}>
-                                    <div style={{ width: '1px', height: '15px', backgroundColor: '#6c757d' }}></div>
-                                    <div className="bg-white border text-center p-2 rounded-1 shadow-sm lh-sm text-muted" style={{ width: '250px', fontSize: '0.65rem' }}>
+                                <Link className="nav-link text-dark" to="/#services">Services</Link>
+                                <div className="services-dropdown d-flex flex-column align-items-center position-absolute start-50 translate-middle-x">
+                                    <div className="dropdown-line"></div>
+                                    <div className="bg-white border text-center p-2 rounded-1 shadow-sm lh-sm text-muted dropdown-content">
                                         <span className="fw-bold text-dark">What We Do,</span> E-Waste Recycling,<br />Refurbishment, precious metal Recovery
                                     </div>
                                 </div>
@@ -93,7 +104,7 @@ const Home = () => {
                     </div>
 
                     {/* Floating Stats Cards */}
-                    <div className="container position-absolute start-50 translate-middle-x" style={{ bottom: '-90px', zIndex: 10 }}>
+                    <div className="container position-absolute start-50 top-100 translate-middle" style={{ zIndex: 10 }}>
                         <div className="row g-4 justify-content-center px-lg-5">
                             <div className="col-lg-3 col-md-6">
                                 <div className="bg-white text-center p-4 rounded-4 shadow-lg h-100">
@@ -136,46 +147,49 @@ const Home = () => {
 
                     <div className="who-we-are-diagram position-relative mt-4" style={{ minHeight: '350px' }}>
                         {/* Center Label */}
-                        <div className="position-absolute start-50 translate-middle-x" style={{ top: '-20px', zIndex: 10 }}>
-                            <h6 className="fw-bold mb-1">Refurbishment &<br />End-to-End Recycling Solutions</h6>
-                            <div className="vertical-line mx-auto"></div>
-                        </div>
+                        <div className="who-we-are-diagram position-relative mt-5 d-flex justify-content-center">
+                            <img src={whoWeAreBg} alt="Who We Are Diagram" className="img-fluid d-none d-lg-block" style={{ maxWidth: '1000px', height: '300px', marginTop: '60px' }} />
 
-                        {/* Diagram Container */}
-                        <div className="d-flex justify-content-center align-items-end gap-2 gap-md-4 h-100 pt-5">
-                            {/* Left Part */}
-                            <div className="position-relative">
-                                <div className="diagram-label-left position-absolute d-none d-lg-flex">
-                                    <h6 className="fw-bold text-end mb-0">Who We Are!<br />New Age Recyclers</h6>
-                                    <div className="horizontal-line-right"></div>
+                            {/* Mobile View / Fallback (simplified) */}
+                            <div className="d-lg-none d-flex flex-column gap-4">
+                                <div className="text-center">
+                                    <h6 className="fw-bold mb-2">Refurbishment &<br />End-to-End Recycling Solutions</h6>
+                                    <i className="bi bi-fan fs-1 text-success"></i>
                                 </div>
-                                <div className="blob-shape bg-success text-white d-flex align-items-center justify-content-center shadow-sm" style={{ borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%', width: '200px', height: '240px', transform: 'rotate(-25deg)' }}>
-                                    <div className="bg-white rounded-circle p-3 text-success d-flex align-items-center justify-content-center shadow-sm" style={{ width: '90px', height: '90px', transform: 'rotate(25deg)' }}>
-                                        <i className="bi bi-brightness-alt-high fs-1"></i>
-                                    </div>
+                                <div className="text-center">
+                                    <h6 className="fw-bold mb-2">Who We Are!<br />New Age Recyclers</h6>
+                                    <i className="bi bi-brightness-alt-high fs-1 text-success"></i>
+                                </div>
+                                <div className="text-center">
+                                    <h6 className="fw-bold mb-2">Our Goal!<br />Environmental Sustainability</h6>
+                                    <i className="bi bi-lightning-charge fs-1 text-success"></i>
                                 </div>
                             </div>
 
-                            {/* Center Part */}
-                            <div className="position-relative" style={{ marginBottom: '50px' }}>
-                                <div className="blob-shape bg-secondary bg-opacity-25 text-success d-flex align-items-center justify-content-center shadow-sm" style={{ borderRadius: '50% 50% 40% 40% / 60% 60% 30% 30%', width: '220px', height: '180px' }}>
-                                    <div className="bg-white rounded-circle p-3 text-success d-flex align-items-center justify-content-center shadow-sm" style={{ width: '90px', height: '90px' }}>
-                                        <i className="bi bi-fan fs-1"></i>
-                                    </div>
+                            {/* Desktop Overlay - Top */}
+                            <div className="position-absolute d-none d-lg-flex flex-column align-items-center overlay-top">
+                                <h4 className="fw-bold mb-4 text-dark text-nowrap text-center" style={{ top: '-60px' }}>Refurbishment &<br />End-to-End Recycling Solutions</h4>
+                                <div className="icon-circle bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center position-relative" style={{ top: '-55px', right: '-9px' }}>
+                                    <i className="bi bi-fan fs-1 text-success"></i>
                                 </div>
                             </div>
 
-                            {/* Right Part */}
-                            <div className="position-relative">
-                                <div className="blob-shape bg-success text-white d-flex align-items-center justify-content-center shadow-sm" style={{ borderRadius: '60% 40% 30% 70% / 50% 40% 50% 60%', width: '200px', height: '240px', transform: 'rotate(25deg)' }}>
-                                    <div className="bg-white rounded-circle p-3 text-success d-flex align-items-center justify-content-center shadow-sm" style={{ width: '90px', height: '90px', transform: 'rotate(-25deg)' }}>
-                                        <i className="bi bi-lightning-charge fs-1"></i>
-                                    </div>
+                            {/* Desktop Overlay - Left */}
+                            <div className="position-absolute d-none d-lg-flex align-items-center overlay-left">
+                                <h5 className="fw-bold text-end mb-0 text-dark me-3">Who We Are!<br />New Age Recyclers</h5>
+                                <div className="connector-line bg-success" style={{ left: '-20px' }}></div>
+                                <div className="icon-circle bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center position-relative" style={{ top: '-30px', right: '40px', left: '-20px' }}>
+                                    <i className="bi bi-brightness-alt-high fs-1 text-success"></i>
                                 </div>
-                                <div className="diagram-label-right position-absolute d-none d-lg-flex">
-                                    <div className="horizontal-line-left"></div>
-                                    <h6 className="fw-bold text-start mb-0">Our Goal!<br />Environmental Sustainability</h6>
+                            </div>
+
+                            {/* Desktop Overlay - Right */}
+                            <div className="position-absolute d-none d-lg-flex align-items-center overlay-right">
+                                <div className="icon-circle bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center position-relative" style={{ top: '-30px', left: '110px' }}>
+                                    <i className="bi bi-lightning-charge fs-1 text-success"></i>
                                 </div>
+                                <div className="connector-line bg-success"></div>
+                                <h5 className="fw-bold text-start mb-0 text-dark position-relative" style={{ left: '110px' }}>Our Goal!<br />Environmental Sustainability</h5>
                             </div>
                         </div>
                     </div>
@@ -187,37 +201,37 @@ const Home = () => {
                 <div className="container">
                     <div className="text-center mb-5">
                         <h2 className="fw-bold">Service Highlights</h2>
-                        <p className="text-muted" style={{ textAlign: 'justify' }}>To meeting all business needs using our Services</p>
+                        <p className="text-muted">To meeting all business needs using our Services</p>
                     </div>
 
                     <div className="row text-center mb-5">
                         <div className="col">
                             <div className="service-icon-box mb-3">
-                                <img src="/assets/images/icon_refurb.png" alt="" className="img-fluid" style={{ height: '60px' }} />
+                                <img src={iconRefurb} alt="" className="img-fluid" style={{ height: '60px' }} />
                             </div>
                             <h6>Refurbishment and Recycling</h6>
                         </div>
                         <div className="col">
                             <div className="service-icon-box mb-3">
-                                <img src="/assets/images/icon_repair.png" alt="" className="img-fluid" style={{ height: '60px' }} />
+                                <img src={iconrepair} alt="" className="img-fluid" style={{ height: '60px' }} />
                             </div>
                             <h6>Repair as a Service</h6>
                         </div>
                         <div className="col">
                             <div className="service-icon-box mb-3">
-                                <img src="/assets/images/icon_precious.png" alt="" className="img-fluid" style={{ height: '60px' }} />
+                                <img src={iconprecious} alt="" className="img-fluid" style={{ height: '60px' }} />
                             </div>
                             <h6>Precious Metals Recovery</h6>
                         </div>
                         <div className="col">
                             <div className="service-icon-box mb-3">
-                                <img src="/assets/images/icon_carbon.png" alt="" className="img-fluid" style={{ height: '60px' }} />
+                                <img src={iconcarbon} alt="" className="img-fluid" style={{ height: '60px' }} />
                             </div>
                             <h6>Carbon Credits</h6>
                         </div>
                         <div className="col">
                             <div className="service-icon-box mb-3">
-                                <img src="/assets/images/icon_upcycle.png" alt="" className="img-fluid" style={{ height: '60px' }} />
+                                <img src={iconupcycle} alt="" className="img-fluid" style={{ height: '60px' }} />
                             </div>
                             <h6>Upcycling</h6>
                         </div>
@@ -409,13 +423,13 @@ const Home = () => {
             <section className="section-padding text-center">
                 <div className="container">
                     <h3 className="fw-bold mb-2">Business relations</h3>
-                    <p className="text-muted mb-5" style={{ textAlign: 'justify' }}>Trusted by the industry's best</p>
-                    <div className="d-flex justify-content-between align-items-center flex-wrap gap-4 opacity-75">
-                        <img src="/assets/images/logo_client1.png" height="40" alt="Client 1" />
-                        <img src="/assets/images/logo_client2.png" height="40" alt="Client 2" />
-                        <img src="/assets/images/logo_client3.png" height="40" alt="Client 3" />
-                        <img src="/assets/images/logo_client4.png" height="40" alt="Client 4" />
-                        <img src="/assets/images/logo_client5.png" height="40" alt="Client 5" />
+                    <p className="text-muted mb-5">Trusted by the industry's best</p>
+                    <div className="d-flex justify-content-center align-items-center flex-wrap gap-5 opacity-75">
+                        <img src={client1} style={{ height: '60px', width: 'auto', maxWidth: '180px', objectFit: 'contain' }} alt="Client 1" />
+                        <img src={client2} style={{ height: '60px', width: 'auto', maxWidth: '180px', objectFit: 'contain' }} alt="Client 2" />
+                        <img src={client3} style={{ height: '60px', width: 'auto', maxWidth: '180px', objectFit: 'contain' }} alt="Client 3" />
+                        <img src={client4} style={{ height: '60px', width: 'auto', maxWidth: '180px', objectFit: 'contain' }} alt="Client 4" />
+                        <img src={client5} style={{ height: '60px', width: 'auto', maxWidth: '180px', objectFit: 'contain' }} alt="Client 5" />
                     </div>
                 </div>
             </section>
@@ -426,27 +440,39 @@ const Home = () => {
                     <div className="row g-4 text-center">
                         <div className="col-md-4">
                             <h4 className="fw-bold mb-4">Press Release</h4>
-                            <div className="bg-dark rounded-4 text-white d-flex align-items-center justify-content-center" style={{ height: '300px', backgroundImage: 'url(/assets/images/news_1.jpg)', backgroundSize: 'cover' }}>
-                                <div className="bg-white rounded-circle p-2 bg-opacity-75">
-                                    <i className="bi bi-play-fill fs-1 text-dark"></i>
-                                </div>
-                            </div>
+                            <iframe
+                                className="w-100 rounded-4"
+                                height="300"
+                                src="https://www.youtube.com/embed/1YZK6Gzq5d0?si=uzNyohL5rad-VlK9"
+                                title="Press Release"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                         <div className="col-md-4">
                             <h4 className="fw-bold mb-4">Featured By</h4>
-                            <div className="bg-dark rounded-4 text-white d-flex align-items-center justify-content-center" style={{ height: '300px', backgroundImage: 'url(/assets/images/news_2.jpg)', backgroundSize: 'cover' }}>
-                                <div className="bg-white rounded-circle p-2 bg-opacity-75">
-                                    <i className="bi bi-play-fill fs-1 text-dark"></i>
-                                </div>
-                            </div>
+                            <iframe
+                                className="w-100 rounded-4"
+                                height="300"
+                                src="https://www.youtube.com/embed/VlTa6uFP9cM?si=147r5w5_Cb8BGJNO"
+                                title="Featured By"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                         <div className="col-md-4">
                             <h4 className="fw-bold mb-4">Podcast</h4>
-                            <div className="bg-dark rounded-4 text-white d-flex align-items-center justify-content-center" style={{ height: '300px', backgroundImage: 'url(/assets/images/news_3.jpg)', backgroundSize: 'cover' }}>
-                                <div className="bg-white rounded-circle p-2 bg-opacity-75">
-                                    <i className="bi bi-play-fill fs-1 text-dark"></i>
-                                </div>
-                            </div>
+                            <iframe
+                                className="w-100 rounded-4"
+                                height="300"
+                                src="https://www.youtube.com/embed/-NkZJn5PZyo?si=JGGS70KSY29DrocF"
+                                title="Podcast"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </div>
                 </div>
@@ -458,7 +484,7 @@ const Home = () => {
                     <div className="row g-5">
                         {/* Left Column */}
                         <div className="col-lg-4 pe-lg-5 border-end border-white border-opacity-25">
-                            <img src="/assets/images/logo_placeholder_white.png" height="60" alt="BluePlanet" className="mb-4" />
+                            <img src={placeHolder} height="60" alt="BluePlanet" className="mb-4" />
                             <h3 className="fw-bold mb-4">Turning Waste to<br />Treasure</h3>
                             <p className="small text-white opacity-75 mb-5 lh-lg" style={{ textAlign: 'justify' }}>Blue Planet E-Waste Solutions is a leading integrated technology-driven platform for responsible e-waste recycling, refurbishment, and resource recovery. We transform discarded electronics into valuable materials through ethical, compliant, and circular economy practices.</p>
                             <div className="d-flex gap-3">
@@ -473,7 +499,7 @@ const Home = () => {
                             <div className="row mb-4">
                                 <div className="col-sm-6">
                                     <h5 className="fw-bold mb-4">About</h5>
-                                    <ul className="list-unstyled footer-links d-flex flex-column gap-2 opacity-75">
+                                    <ul className="list-unstyled footer-links d-flex flex-column gap-2">
                                         <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>About</Link></li>
                                         <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Who we are</Link></li>
                                         <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>What we do</Link></li>
@@ -483,7 +509,7 @@ const Home = () => {
                                 </div>
                                 <div className="col-sm-6">
                                     <h5 className="fw-bold mb-4">Services</h5>
-                                    <ul className="list-unstyled footer-links d-flex flex-column gap-2 opacity-75">
+                                    <ul className="list-unstyled footer-links d-flex flex-column gap-2">
                                         <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>E-Waste Recyling</Link></li>
                                         <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Refurbishment</Link></li>
                                         <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Precious metals</Link></li>
