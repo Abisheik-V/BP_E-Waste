@@ -104,7 +104,7 @@ const Home = () => {
                     </div>
 
                     {/* Floating Stats Cards */}
-                    <div className="container position-absolute start-50 top-100 translate-middle" style={{ zIndex: 10 }}>
+                    <div className="container position-absolute start-50 top-100 translate-middle hero-stats-container" style={{ zIndex: 10 }}>
                         <div className="row g-4 justify-content-center px-lg-5">
                             <div className="col-lg-3 col-md-6">
                                 <div className="bg-white text-center p-4 rounded-4 shadow-lg h-100">
@@ -137,7 +137,7 @@ const Home = () => {
 
             {/* Spacer for the overlapping cards */}
             <div style={{ height: '120px' }} className="d-none d-md-block"></div>
-            <div style={{ height: '450px' }} className="d-block d-md-none"></div>
+            {/* Mobile spacer removed */}
 
             {/* Who We Are */}
             <section className="section-padding text-center overflow-hidden" id="who-we-are">

@@ -286,3 +286,157 @@ body {
     width: 250px;
     font-size: 0.65rem;
 }
+
+/* Process Diagram Responsive Adjustments */
+@media (max-width: 991px) {
+
+    /* 1. Reset Container */
+    .process-diagram-wrapper {
+        min-height: auto !important;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    /* 2. Hide the circular background frame */
+    .process-frame-wrapper>img {
+        display: none !important;
+    }
+
+    /* 3. Reset Frame Wrapper Size (it was limiting layout) */
+    .process-frame-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* 4. Center Title styling */
+    .process-center-title {
+        position: static !important;
+        transform: none !important;
+        text-align: center !important;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .process-center-title h2 {
+        text-align: center;
+    }
+
+    /* 5. Process Step Cards - Override ALL absolute positioning */
+    .process-step {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+
+        width: 100% !important;
+        max-width: 400px;
+        /* Limit width on tablets */
+        margin: 0 auto 20px auto;
+        /* Add margin bottom for spacing between stacked items */
+
+        /* Card Styling for mobile */
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        text-align: center !important;
+        /* Force center alignment */
+    }
+
+    /* Ensure specific alignment fixes within steps are handled */
+    .process-step .d-flex {
+        justify-content: center !important;
+        /* Center icons */
+    }
+
+    .process-step h6 {
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Fix step-specific internal alignment to be center for mobile */
+    .process-step p {
+        text-align: center !important;
+    }
+}
+
+/* Footer Newsletter Responsive Fix */
+@media (max-width: 576px) {
+    .newsletter-box .position-relative {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-box .bi-envelope {
+        top: 25px !important;
+        /* Adjust Icon position relative to input */
+        transform: translateY(-50%) !important;
+    }
+
+    .custom-newsletter-input {
+        width: 100% !important;
+        padding-right: 20px !important;
+        /* Remove huge right padding since button moves */
+    }
+
+    .newsletter-box button {
+        position: static !important;
+        /* Stack button below input */
+        transform: none !important;
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* Home Page Hero Responsive Fix */
+@media (max-width: 991px) {
+
+    /* Reduce Hero Title Size */
+    .hero-wrapper h1.display-1 {
+        font-size: 2.5rem;
+        /* Further reduced for better fit */
+    }
+
+    /* Reset vertical height constraint on mobile to allow natural flow */
+    .hero-wrapper .min-vh-100 {
+        min-height: auto !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* Adjust wrapper spacing */
+    .hero-wrapper {
+        padding-bottom: 0;
+    }
+
+    /* Refactor Floating Stats to be Static on Mobile */
+    /* Targeting by class is sufficient now since we removed the specific selector override above */
+    .hero-stats-container {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Ensure the specific bootstrap selection doesn't interfere if still present in DOM order */
+    .container.position-absolute.start-50.top-100.translate-middle {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+    }
+}
