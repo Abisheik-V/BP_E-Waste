@@ -88,9 +88,9 @@ const WhatWeDo = () => {
             </header>
 
             {/* Sustainability Section */}
-            <section className="py-5 bg-white">
+            <section className="section-padding bg-white">
                 <div className="container">
-                    <div className="row align-items-center mb-5">
+                    <div className="row align-items-center mb-3 mb-lg-5">
                         <div className="col-lg-5 text-center mb-4 mb-lg-0 pe-lg-5">
                             <img src={introSprout} alt="Sustainability" className="img-fluid" style={{ maxHeight: '350px' }} />
                         </div>
@@ -103,7 +103,7 @@ const WhatWeDo = () => {
                         </div>
                     </div>
 
-                    <div className="text-center mx-auto mt-5" style={{ maxWidth: '900px' }}>
+                    <div className="text-center mx-auto mt-3 mt-lg-5" style={{ maxWidth: '900px' }}>
                         <h2 className="mb-0 text-dark display-5" style={{ fontWeight: '400' }}>Technology evolves fast.</h2>
                         <h2 className="mb-4 text-dark display-5 fw-bold">Waste should not.</h2>
                         <p className="text-muted lh-lg px-lg-5" style={{ fontSize: '1.1rem' }}>
@@ -116,7 +116,7 @@ const WhatWeDo = () => {
             {/* Comprehensive Solutions */}
             <section className="section-padding" style={{ backgroundColor: '#5c9c44' }}>
                 <div className="container">
-                    <h2 className="text-center text-white mb-5 display-5"><span className="fw-light">Our</span> <span className="fw-bold">Comprehensive</span> <span className="fw-light">Solutions</span></h2>
+                    <h2 className="text-center text-white mb-3 mb-lg-5 display-5"><span className="fw-light">Our</span> <span className="fw-bold">Comprehensive</span> <span className="fw-light">Solutions</span></h2>
 
                     <div className="d-flex flex-column gap-5">
                         {/* Solution 1 */}
@@ -368,7 +368,7 @@ const WhatWeDo = () => {
             <section className="section-padding position-relative overflow-hidden">
                 <div className="position-absolute top-50 start-50 translate-middle w-100 h-100" style={{ backgroundImage: `url(${benefitBg})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', zIndex: -1 }}></div>
                 <div className="container position-relative z-1">
-                    <h2 className="text-center fw-bold mb-5">Why Blue Planet <span className="fw-bolder">E-Waste Solutions</span></h2>
+                    <h2 className="text-center fw-bold mb-3 mb-lg-5">Why Blue Planet <span className="fw-bolder">E-Waste Solutions</span></h2>
 
                     <div className="row g-4 justify-content-center">
                         {/* Our Differentiators */}
@@ -498,7 +498,7 @@ const WhatWeDo = () => {
             </section>
 
             {/* Bottom Contact/Footer Banner */}
-            <section className="py-5 bg-white text-center">
+            <section className="section-padding bg-white text-center">
                 <div className="container">
                     <h4 className="text-muted fw-bold">Together, We Can Build a</h4>
                     <h2 className="display-6 fw-bold">Regenerative Future</h2>

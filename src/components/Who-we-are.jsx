@@ -108,7 +108,7 @@ const WhatWeDo = () => {
             </header>
 
             {/* Intro Quote Section */}
-            <section className="bg-white py-5">
+            <section className="bg-white section-padding">
                 <div className="container">
                     <div className="d-flex justify-content-center align-items-center mb-4 gap-4">
                         <div className="me-2">
@@ -122,7 +122,7 @@ const WhatWeDo = () => {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-center mb-5">
+                    <div className="d-flex justify-content-center mb-3 mb-lg-5">
                         <div style={{ width: '400px', height: '1px', backgroundColor: '#e0e0e0' }}></div>
                     </div>
 
@@ -138,7 +138,7 @@ const WhatWeDo = () => {
             </section>
 
             {/* Green Banner Info */}
-            <section className="text-white py-5 text-center position-relative overflow-hidden" style={{ backgroundColor: '#5CB85C' }}>
+            <section className="text-white section-padding text-center position-relative overflow-hidden" style={{ backgroundColor: '#5CB85C' }}>
                 <div className="container position-relative z-1">
                     <h4 className="fw-normal mb-4">At <span className="fw-bold">Blue Planet E-Waste Solutions</span>, we transform the way e-waste is managed.</h4>
                     <p className="small opacity-90 mx-auto w-75" style={{ lineHeight: '1.8', textAlign: 'justify' }}>We provide scientifically engineered and fully certified recycling solutions that ensure safe processing, maximum material recovery, full traceability, and measurable sustainability impact. Our ecosystem helps enterprises, government agencies, institutions, and individuals reduce their environmental footprint while recovering value from discarded electronic assets.</p>
@@ -149,7 +149,7 @@ const WhatWeDo = () => {
             <section className="section-padding text-white" style={{ backgroundColor: '#003366' }}>
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-5 mb-5 mb-lg-0">
+                        <div className="col-lg-5 mb-3 mb-lg-0">
                             <h2 className="fw-light mb-0 h3">What is</h2>
                             <h2 className="fw-bold display-4 mb-4">E-Waste Recycling?</h2>
                             <p className="opacity-90 mb-4 me-lg-4" style={{ lineHeight: '1.7', fontSize: '0.95rem', textAlign: 'justify' }}>E-waste recycling is the structured process of recovering usable components, extracting precious materials, upcycling resources, and safely treating hazardous elements from end-of-life electronic products. Instead of discarding equipment into landfills, recycling enables:</p>
@@ -185,7 +185,7 @@ const WhatWeDo = () => {
             <section className="section-padding">
                 <div className="container text-center">
                     <h2 className="mb-2 display-5" style={{ fontWeight: '500' }}>What <span className="fw-bolder">We Recycle</span></h2>
-                    <p className="text-muted mb-5" style={{ fontSize: '1.2rem', opacity: 0.6 }}>We provide comprehensive recycling for:</p>
+                    <p className="text-muted mb-3 mb-lg-5" style={{ fontSize: '1.2rem', opacity: 0.6 }}>We provide comprehensive recycling for:</p>
 
                     <div className="row justify-content-center">
                         {/* IT Assets */}
@@ -302,10 +302,9 @@ const WhatWeDo = () => {
                 </div>
             </section>
 
-            {/* Key Benefits */}
             <section className="section-padding bg-light">
                 <div className="container">
-                    <h2 className="text-center fw-bold mb-5">Key <span className="fw-bolder">Benefits</span></h2>
+                    <h2 className="text-center fw-bold mb-3 mb-lg-5">Key <span className="fw-bolder">Benefits</span></h2>
                     <div className="row g-4">
                         <div className="col-md-4">
                             <div className="bg-white rounded-4 h-100 shadow-sm overflow-hidden">
@@ -381,7 +380,7 @@ const WhatWeDo = () => {
             <section className="section-padding position-relative overflow-hidden">
                 <div className="position-absolute top-50 start-50 translate-middle w-100 h-100" style={{ backgroundImage: `url(${benefitBg})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', zIndex: -1 }}></div>
                 <div className="container position-relative z-1">
-                    <h2 className="text-center fw-bold mb-5">Why Blue Planet <span className="fw-bolder">E-Waste Solutions</span></h2>
+                    <h2 className="text-center fw-bold mb-3 mb-lg-5">Why Blue Planet <span className="fw-bolder">E-Waste Solutions</span></h2>
 
                     <div className="row g-4 justify-content-center">
                         {/* Blue Planet Advantage Card */}
@@ -450,7 +449,7 @@ const WhatWeDo = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-5 text-center">
+            <section className="section-padding text-center">
                 <div className="container">
                     <h3 className="fw-bold text-muted mb-2">Start your E-waste</h3>
                     <h2 className="fw-bold mb-4 display-6">Recycling, Refurbishment & IT Service Journey</h2>
