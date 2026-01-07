@@ -428,7 +428,7 @@ body {
         transform: none !important;
         width: 100% !important;
         margin-top: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -438,5 +438,19 @@ body {
         position: static !important;
         transform: none !important;
         width: 100% !important;
+    }
+
+    /* Reduce section padding on mobile for tighter spacing */
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    /* Further reduce gap specifically between Who We Are and Services */
+    #who-we-are {
+        padding-bottom: 20px !important;
+    }
+
+    #services {
+        padding-top: 20px !important;
     }
 }

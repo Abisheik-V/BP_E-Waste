@@ -57,7 +57,7 @@ const WhatWeDo = () => {
                             <li className="nav-item"><Link className="nav-link text-dark" to="/">Home</Link></li>
                             <li className="nav-item"><Link className="nav-link text-dark" to="/who-we-are">Who we are</Link></li>
                             <li className="nav-item position-relative">
-                                <Link className="nav-link text-dark" to="/#services">Services</Link>
+                                <Link className="nav-link text-dark" to="/what-we-do">Services</Link>
                                 <div className="services-dropdown d-flex flex-column align-items-center position-absolute start-50 translate-middle-x">
                                     <div className="dropdown-line"></div>
                                     <div className="bg-white border text-center p-2 rounded-1 shadow-sm lh-sm text-muted dropdown-content">
