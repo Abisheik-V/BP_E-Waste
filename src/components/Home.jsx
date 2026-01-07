@@ -58,7 +58,7 @@ const Home = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto align-items-center gap-4 fw-bolder">
                             <li className="nav-item"><Link className="nav-link text-dark" to="/">Home</Link></li>
-                            <li className="nav-item"><Link className="nav-link text-dark" to="/what-we-do">What We Do</Link></li>
+                            <li className="nav-item"><Link className="nav-link text-dark" to="/who-we-are">Who we are</Link></li>
                             <li className="nav-item position-relative">
                                 <Link className="nav-link text-dark" to="/#services">Services</Link>
                                 <div className="services-dropdown d-flex flex-column align-items-center position-absolute start-50 translate-middle-x">
@@ -500,19 +500,19 @@ const Home = () => {
                                 <div className="col-sm-6">
                                     <h5 className="fw-bold mb-4">About</h5>
                                     <ul className="list-unstyled footer-links d-flex flex-column gap-2">
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>About</Link></li>
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Who we are</Link></li>
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>What we do</Link></li>
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Impact</Link></li>
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Contact us</Link></li>
+                                        <li><Link to="/about" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>About</Link></li>
+                                        <li><Link to="/who-we-are" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Who we are</Link></li>
+                                        <li><Link to="/what-we-do" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>What we do</Link></li>
+                                        <li><Link to="/impact" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Impact</Link></li>
+                                        <li><Link to="/contact-us" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Contact us</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-sm-6">
                                     <h5 className="fw-bold mb-4">Services</h5>
                                     <ul className="list-unstyled footer-links d-flex flex-column gap-2">
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>E-Waste Recyling</Link></li>
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Refurbishment</Link></li>
-                                        <li><Link to="#" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Precious metals</Link></li>
+                                        <li><Link to="/e-waste-recycling" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>E-Waste Recyling</Link></li>
+                                        <li><Link to="/refurbishment" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Refurbishment</Link></li>
+                                        <li><Link to="/precious-metals" className="text-white text-decoration-none d-flex align-items-center"><i className="bi bi-arrow-right-short me-2"></i>Precious metals</Link></li>
                                     </ul>
                                 </div>
                             </div>
